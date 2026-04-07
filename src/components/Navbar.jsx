@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { FaRobot } from 'react-icons/fa'
+import chatbot from "../../public/chat-bot.png"
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -28,8 +30,27 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <FaRobot className="text-2xl text-sky-500" />
-          <h2 className="text-white text-xl font-bold">AI Social</h2>
+          <img
+            src={chatbot}
+            alt="Chatbot"
+            className="w-7 h-7 md:w-9 md:h-9 object-contain"
+          />
+          <Link
+            to="/"
+            className="relative inline-block px-2 py-0.5 rounded-lg overflow-hidden"
+          >
+            {/* Text */}
+            <h2 className="text-xl font-bold text-white relative z-10">
+              AetherAI
+            </h2>
+
+            {/* Animated border */}
+            <span
+              className="absolute inset-0 rounded-lg border-2 border-transparent
+                   bg-[linear-gradient(270deg,#ec4899,#3b82f6,#7e22ce,#ec4899)]
+                   bg-size-[600%_600%] animate-borderGradient"
+            ></span>
+          </Link>
         </div>
 
         {/* Buttons */}
