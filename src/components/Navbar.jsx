@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
-import { FaRobot } from 'react-icons/fa'
 import chatbot from "../../public/chat-bot.png"
 import { Link } from 'react-router-dom'
 
@@ -66,7 +65,7 @@ export default function Navbar() {
           <motion.button
             whileHover={{ scale: 1.1, boxShadow: '0 0 15px #38bdf8' }}
             whileTap={{ scale: 0.95 }}
-            className="px-2 md:px-4 py-1 md:py-2 text-sm md:text-base rounded-md bg-sky-500 text-black font-semibold hover:bg-sky-600 transition-all duration-300"
+            className="px-2 md:px-4 py-1 md:py-2 text-sm md:text-base rounded-md bg-sky-500 text-black hover:text-white font-semibold hover:bg-sky-600 transition-all duration-300 "
           >
             Register
           </motion.button>

@@ -1,5 +1,15 @@
-@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
+@import 'tailwindcss';
+@plugin "daisyui";
+
+body{
+  font-family:'Inter', sans-serif;
+}
+
+.container{
+  color:white;
+}
 
 @keyframes borderGradient {
   0% { background-position: 0% 50%; }
