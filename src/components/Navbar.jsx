@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import chatbot from "../../public/chat-bot.png"
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -50,6 +50,34 @@ export default function Navbar() {
                    bg-size-[600%_600%] animate-borderGradient"
             ></span>
           </Link>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center space-x-3">
+          <NavLink
+            to="/"
+            className="text-white hover:text-sky-300 transition-colors duration-300"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className="text-white hover:text-sky-300 transition-colors duration-300"
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/services"
+            className="text-white hover:text-sky-300 transition-colors duration-300"
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className="text-white hover:text-sky-300 transition-colors duration-300"
+          >
+            Contact
+          </NavLink>
         </div>
 
         {/* Buttons */}

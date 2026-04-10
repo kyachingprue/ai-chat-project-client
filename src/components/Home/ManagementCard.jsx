@@ -1,17 +1,9 @@
 import React from 'react';
-import bg from '../../assets/dark-room-with-light-background.jpg';
 
 export default function ManagementCard() {
   return (
     <section
-      className="min-h-screen px-5 py-20 md:py-40"
-      style={{
-        backgroundImage: `url(${bg})`,
-        height: '100vh',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
+      className="min-h-screen px-5 py-20 md:py-40 bg-cyan-950">
       <main className="flex flex-col md:flex-row justify-between items-center gap-5">
         <div className="px-4">
           <img
