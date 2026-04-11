@@ -2,8 +2,7 @@ import React from 'react';
 
 export default function ManagementCard() {
   return (
-    <section
-      className="min-h-screen px-5 py-20 md:py-40 bg-cyan-950">
+    <section className="h-full md:min-h-screen px-5 py-20 md:py-40 bg-[#022119]">
       <main className="flex flex-col md:flex-row justify-between items-center gap-5">
         <div className="px-4">
           <img
@@ -12,7 +11,9 @@ export default function ManagementCard() {
             alt="Content Submission"
           />
           <div>
-            <h3 className="text-xl text-white text-center py-4">Content Submission</h3>
+            <h3 className="text-xl text-white text-center py-4">
+              Content Submission
+            </h3>
             <p className="text-sm md:text-base text-center text-gray-300">
               Assertively actualize client-based paradigms with premium sources.
               Conveniently initiate ethical catalysts for change before
@@ -27,7 +28,9 @@ export default function ManagementCard() {
             alt="Conversion Rate"
           />
           <div>
-            <h3 className="text-xl text-white text-center py-4">Conversion Rate</h3>
+            <h3 className="text-xl text-white text-center py-4">
+              Conversion Rate
+            </h3>
             <p className="text-sm md:text-base text-center text-gray-300 ">
               Assertively actualize client-based paradigms with premium sources.
               Conveniently initiate ethical catalysts for change before
@@ -42,7 +45,9 @@ export default function ManagementCard() {
             alt="Real-Time Analytics"
           />
           <div>
-            <h3 className="text-xl text-center text-white py-4">Real-Time Analytics</h3>
+            <h3 className="text-xl text-center text-white py-4">
+              Real-Time Analytics
+            </h3>
             <p className="text-sm md:text-base text-center text-gray-300">
               Assertively actualize client-based paradigms with premium sources.
               Conveniently initiate ethical catalysts for change before
@@ -57,7 +62,9 @@ export default function ManagementCard() {
             alt="Online Management"
           />
           <div>
-            <h3 className="text-xl text-center text-white py-4">Online Management</h3>
+            <h3 className="text-xl text-center text-white py-4">
+              Online Management
+            </h3>
             <p className="text-sm md:text-base text-center text-gray-300">
               Assertively actualize client-based paradigms with premium sources.
               Conveniently initiate ethical catalysts for change before

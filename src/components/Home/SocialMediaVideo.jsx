@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default function SocialMediaVideo() {
   return (
@@ -16,8 +16,18 @@ export default function SocialMediaVideo() {
             the art intellectual capital before go forward processes.
             Phosfluorescently cultivate bleeding-edge interfaces through.
           </p>
-          <button className="text-sm md:text-base py-1 md:py-2 px-3 md:px-5 rounded-md border-b-2 transition duration-700 hover:border-b-8 border-blue-400 bg-blue-950 text-white">
-            Get Started
+          <button
+            className="relative overflow-hidden text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-xl bg-linear-to-r from-sky-500 via-blue-600 to-purple-600 text-white font-medium shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-[0_0_25px_rgba(56,189,248,0.6)]"
+          >
+            {/* Shine Effect */}
+            <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition duration-500"></span>
+
+            {/* Moving Light Effect */}
+            <span
+              className="absolute -left-20 top-0 h-full w-20 bg-white/20 blur-md rotate-12 transition-all duration-700 group-hover:left-full"
+            ></span>
+
+            <span className="relative z-10">Get Started 🚀</span>
           </button>
         </div>
         <div className="flex-1">
@@ -30,4 +40,3 @@ export default function SocialMediaVideo() {
     </div>
   )
 }
-

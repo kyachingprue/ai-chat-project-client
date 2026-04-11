@@ -4,13 +4,13 @@ import bg from '../../assets/dark-background.jpg';
 
 export default function SocialMediaBanner() {
   return (
-    <div className="min-h-screen w-full mx-auto" style={{
+    <div className="h-full md:min-h-screen w-full mx-auto" style={{
             backgroundImage: `url(${bg})`,
             height: '100vh',
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}>
-      <div className="flex max-w-10/12 py-40 mx-auto justify-between items-center gap-6 md:gap-12 flex-col md:flex-row">
+      <div className="flex max-w-10/12 py-2 md:py-40 mx-auto justify-between items-center gap-6 md:gap-12 flex-col md:flex-row">
         <div className='flex-1'>
           <img src={bannerImage} className="w-full h-full rounded-md" alt="Banner Images" />
         </div>

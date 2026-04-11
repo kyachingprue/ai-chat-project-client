@@ -53,28 +53,52 @@ export default function Navbar() {
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden md:flex items-center space-x-3 md:space-x-6 lg:space-x-9">
           <NavLink
             to="/"
-            className="text-white hover:text-sky-300 transition-colors duration-300"
+            className={({ isActive }) =>
+              `transition-colors duration-300 ${
+                isActive
+                  ? 'text-sky-400 underline underline-offset-8'
+                  : 'text-gray-300 hover:text-sky-300'
+              }`
+            }
           >
             Home
           </NavLink>
           <NavLink
             to="/about"
-            className="text-white hover:text-sky-300 transition-colors duration-300"
+            className={({ isActive }) =>
+              `transition-colors duration-300 ${
+                isActive
+                  ? 'text-sky-400 underline underline-offset-8'
+                  : 'text-gray-300 hover:text-sky-300'
+              }`
+            }
           >
             About
           </NavLink>
           <NavLink
             to="/services"
-            className="text-white hover:text-sky-300 transition-colors duration-300"
+            className={({ isActive }) =>
+              `transition-colors duration-300 ${
+                isActive
+                  ? 'text-sky-400 underline underline-offset-8'
+                  : 'text-gray-300 hover:text-sky-300'
+              }`
+            }
           >
             Services
           </NavLink>
           <NavLink
             to="/contact"
-            className="text-white hover:text-sky-300 transition-colors duration-300"
+            className={({ isActive }) =>
+              `transition-colors duration-300 ${
+                isActive
+                  ? 'text-sky-400 underline underline-offset-8'
+                  : 'text-gray-300 hover:text-sky-300'
+              }`
+            }
           >
             Contact
           </NavLink>
