@@ -5,6 +5,7 @@ import SocialMediaBanner from '../components/Home/SocialMediaBanner';
 import SocialMediaVideo from '../components/Home/SocialMediaVideo';
 import SmartSocialSection from '../components/Home/SmartSocialSection';
 import SocialPlatformsSection from '../components/Home/SocialPlatformsSection';
+import DigitalWorldSection from '../components/Home/DigitalWorldSection';
 
 const Home = () => {
   return (
@@ -14,7 +15,8 @@ const Home = () => {
       <ManagementCard />
       <SocialMediaBanner />
       <SocialMediaVideo />
-      <SocialPlatformsSection/>
+      <SocialPlatformsSection />
+      <DigitalWorldSection/>
    </section>
   );
 };

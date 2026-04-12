@@ -13,7 +13,7 @@ const ServiceBanner = () => {
       <div className="absolute top-10 left-10 w-60 h-60 bg-sky-500/20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-10 right-10 w-60 h-60 bg-purple-500/20 blur-3xl rounded-full"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* 🔥 LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
