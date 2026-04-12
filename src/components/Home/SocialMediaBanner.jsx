@@ -4,7 +4,7 @@ import bg from '../../assets/dark-background.jpg';
 
 export default function SocialMediaBanner() {
   return (
-    <div className="h-full md:min-h-screen w-full mx-auto" style={{
+    <div className="h-full md:min-h-screen w-full py-20 md:py-12 lg:py-0 mx-auto" style={{
             backgroundImage: `url(${bg})`,
             height: '100vh',
             backgroundSize: 'cover',
