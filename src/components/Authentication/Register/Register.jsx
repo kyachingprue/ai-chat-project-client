@@ -12,6 +12,7 @@ import {
 import { motion } from 'motion/react'
 import toast from 'react-hot-toast'
 import useAuth from '../../../hooks/useAuth'
+import GoogleLogin from '../google/GoogleLogin'
 
 const Register = () => {
   const { createUser, updateUserProfile, logOut } = useAuth();
@@ -216,6 +217,9 @@ const Register = () => {
                   'Create Account'
                 )}
               </motion.button>
+              
+              {/* Google Register */}
+              <GoogleLogin/>
 
               {/* Login Link */}
               <p className="text-center text-gray-400 pt-4">

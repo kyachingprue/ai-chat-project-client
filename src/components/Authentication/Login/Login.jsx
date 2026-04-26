@@ -5,13 +5,15 @@ import { FaEye, FaEyeSlash, FaRocket, FaUserCircle } from 'react-icons/fa'
 import { motion } from 'motion/react'
 import toast from 'react-hot-toast'
 import useAuth from '../../../hooks/useAuth'
-
+import GoogleLogin from '../google/GoogleLogin'
 
 const Login = () => {
   const { signInUser, forgetPassword } = useAuth()
+
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors }
   } = useForm()
 
@@ -39,8 +41,9 @@ const Login = () => {
       })
   }
 
+  // ✅ Fixed Forgot Password
   const handleForgetPassword = () => {
-    const email = document.getElementById('email').value
+    const email = getValues('email')
 
     if (!email) {
       return toast.error('Please enter your email first')
@@ -48,7 +51,7 @@ const Login = () => {
 
     forgetPassword(email)
       .then(() => {
-        toast.success('Password reset link sent to your email')
+        toast.success('Password reset link sent to your email 📩')
       })
       .catch(error => {
         toast.error(error.message)
@@ -172,6 +175,9 @@ const Login = () => {
                   'Login Now'
                 )}
               </motion.button>
+
+              {/* Google Login */}
+              <GoogleLogin/>
 
               {/* Register */}
               <p className="text-center text-gray-400 pt-4">
