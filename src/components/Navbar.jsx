@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import chatbot from "../../public/chat-bot.png"
 import { Link, NavLink } from 'react-router-dom'
+import useAuth from '../hooks/useAuth'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const { user } = useAuth();
+  console.log("user data-->",user);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,21 +109,54 @@ export default function Navbar() {
 
         {/* Buttons */}
         <div className="flex items-center space-x-1 md:space-x-4">
-          <motion.button
-            whileHover={{ scale: 1.1, backgroundColor: '#0ea5e9' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-2 md:px-4 py-1 md:py-2 text-sm md:text-base rounded-md border border-sky-500 text-white hover:bg-sky-500 transition-colors duration-300"
-          >
-            Login
-          </motion.button>
+          {user ? (
+            <Link to="/profile">
+              <div className="relative group cursor-pointer">
+                {/* User Image */}
+                <img
+                  src={
+                    user.photoURL
+                      ? user.photoURL
+                      : 'https://i.ibb.co/4pDNDk1/avatar.png'
+                  }
+                  alt="user"
+                  className="w-10 h-10 md:w-11 md:h-11 rounded-full border-2 border-sky-500 object-cover hover:scale-110 transition duration-300 shadow-lg"
+                />
 
-          <motion.button
-            whileHover={{ scale: 1.1, boxShadow: '0 0 15px #38bdf8' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-2 md:px-4 py-1 md:py-2 text-sm md:text-base rounded-md bg-sky-500 text-black hover:text-white font-semibold hover:bg-sky-600 transition-all duration-300 "
-          >
-            Register
-          </motion.button>
+                {/* Hover Name */}
+                <div className="absolute right-0 top-12 opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-300 pointer-events-none z-50">
+                  <div className="px-3 py-2 rounded-lg bg-black text-white text-sm whitespace-nowrap border border-sky-500 shadow-xl">
+                    {user.displayName || 'User'}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ) : (
+            <>
+              <Link to="/login">
+                <motion.button
+                  whileHover={{ scale: 1.1, backgroundColor: '#0ea5e9' }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-2 md:px-4 py-1 md:py-2 text-sm md:text-base rounded-md border border-sky-500 text-white hover:bg-sky-500 transition-colors duration-300"
+                >
+                  Login
+                </motion.button>
+              </Link>
+
+              <Link to="/register">
+                <motion.button
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: '0 0 15px #38bdf8'
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-2 md:px-4 py-1 md:py-2 text-sm md:text-base rounded-md bg-sky-500 text-black hover:text-white font-semibold hover:bg-sky-600 transition-all duration-300"
+                >
+                  Register
+                </motion.button>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </motion.nav>
