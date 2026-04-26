@@ -34,7 +34,10 @@ const Profile = () => {
         className="relative h-80 lg:h-100 w-full"
         style={{
           backgroundImage:
-            "url('https://i.ibb.co.com/DN70wfN/monk-meditates-mountains-stockcake.webp')"
+            "url('https://i.ibb.co.com/WpgCBh14/beautiful-shot-natural-scenery-autumn.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
@@ -57,7 +60,7 @@ const Profile = () => {
           />
 
           <div className="pb-2">
-            <h2 className="text-3xl md:text-5xl font-bold flex items-center gap-2">
+            <h2 className="text-2xl md:text-5xl font-bold flex items-center md:gap-2">
               {user?.displayName || 'Aether User'}
               <FaCheckCircle className="text-cyan-300 text-2xl" />
             </h2>
@@ -89,23 +92,35 @@ const Profile = () => {
 
               <p className="flex items-center gap-3">
                 <FaGlobe className="text-green-400" />
-                www.aethercreator.com
+                www.aethercreator_AI.com
               </p>
             </div>
           </div>
 
-          {/* Logout */}
+          {/* Logout Button */}
           <motion.button
             onClick={handleLogout}
             whileHover={{
-              scale: 1.03,
-              boxShadow: '0 0 25px rgba(239,68,68,0.4)'
+              scale: 1.05,
+              boxShadow: '0 10px 30px rgba(239, 68, 68, 0.5)'
             }}
             whileTap={{ scale: 0.95 }}
-            className="w-full py-4 rounded-2xl bg-linear-to-r from-red-500 to-pink-500 font-semibold text-lg flex items-center justify-center gap-2"
+            className="w-full py-4 rounded-2xl relative overflow-hidden group font-semibold text-lg flex items-center justify-center gap-3 text-white
+            bg-linear-to-r from-red-500 via-rose-500 to-pink-500 shadow-lg"
           >
-            <FaSignOutAlt />
-            Logout
+            {/* Glow effect layer */}
+            <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition duration-500"></span>
+
+            {/* Icon with animation */}
+            <motion.span
+              whileHover={{ rotate: 15 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              className="text-xl"
+            >
+              <FaSignOutAlt />
+            </motion.span>
+
+            <span className="tracking-wide">Logout</span>
           </motion.button>
         </div>
 

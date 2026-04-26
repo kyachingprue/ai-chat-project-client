@@ -63,7 +63,7 @@ export default function Navbar() {
               `transition-colors duration-300 ${
                 isActive
                   ? 'text-sky-400 underline underline-offset-8'
-                  : 'text-gray-300 hover:text-sky-300'
+                  : 'text-white hover:text-sky-300'
               }`
             }
           >
@@ -75,7 +75,7 @@ export default function Navbar() {
               `transition-colors duration-300 ${
                 isActive
                   ? 'text-sky-400 underline underline-offset-8'
-                  : 'text-gray-300 hover:text-sky-300'
+                  : 'text-white hover:text-sky-300'
               }`
             }
           >
@@ -87,7 +87,7 @@ export default function Navbar() {
               `transition-colors duration-300 ${
                 isActive
                   ? 'text-sky-400 underline underline-offset-8'
-                  : 'text-gray-300 hover:text-sky-300'
+                  : 'text-white hover:text-sky-300'
               }`
             }
           >
@@ -99,7 +99,7 @@ export default function Navbar() {
               `transition-colors duration-300 ${
                 isActive
                   ? 'text-sky-400 underline underline-offset-8'
-                  : 'text-gray-300 hover:text-sky-300'
+                  : 'text-white hover:text-sky-300'
               }`
             }
           >
