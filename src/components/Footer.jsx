@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className='flex space-x-2 items-center pb-4'>
             <img src={logo} className='w-7 h-7 md:w-9 md:h-9' alt="Website logo image" />
-            <h2 className="text-2xl font-bold mb-2">AetherAI</h2>
+            <h2 className="text-lg md:text-2xl font-bold mb-2">AetherAI</h2>
           </div>
           <p className="text-gray-300 max-w-xs">
             AI-driven solutions for smarter experiences. Explore, innovate, and

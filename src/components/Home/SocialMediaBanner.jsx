@@ -8,7 +8,7 @@ import {
   FaBullhorn
 } from 'react-icons/fa'
 
-import bannerImage from '../../assets/socialmedia.jpg'
+import technologyImage from '../../../public/technoly_images.jpg'
 import bg from '../../assets/dark-background.jpg'
 
 export default function SocialMediaBanner() {
@@ -40,7 +40,7 @@ export default function SocialMediaBanner() {
           >
             <div className="rounded-3xl overflow-hidden border border-cyan-400/30 shadow-2xl">
               <img
-                src={bannerImage}
+                src={technologyImage}
                 alt="Social Media Banner"
                 className="w-full h-80 md:h-125 object-cover hover:scale-105 transition duration-700"
               />
