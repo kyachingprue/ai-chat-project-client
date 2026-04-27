@@ -25,7 +25,7 @@ const AboutSmartSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             Smart AI Social Platform
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
@@ -43,7 +43,7 @@ const AboutSmartSection = () => {
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 transition"
+              className="bg-black backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 transition"
             >
               <FaRobot className="text-sky-400 text-3xl mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">
@@ -59,7 +59,7 @@ const AboutSmartSection = () => {
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9 }}
-              className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 transition"
+              className="bg-black backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 transition"
             >
               <FaChartLine className="text-pink-400 text-3xl mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">
@@ -88,7 +88,7 @@ const AboutSmartSection = () => {
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 transition"
+              className="bg-black backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 transition"
             >
               <FaUsers className="text-yellow-400 text-3xl mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">
@@ -103,7 +103,7 @@ const AboutSmartSection = () => {
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9 }}
-              className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 transition"
+              className="bg-black backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-white/10 hover:scale-105 transition"
             >
               <FaGlobe className="text-green-400 text-3xl mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">

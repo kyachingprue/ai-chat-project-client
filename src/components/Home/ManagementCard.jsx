@@ -4,7 +4,7 @@ export default function ManagementCard() {
   return (
     <section className="h-full md:min-h-screen px-5 py-20 md:py-40 bg-[#022119]">
       <main className="flex flex-col md:flex-row justify-between items-center gap-5">
-        <div className="px-4">
+        <div className="px-4 border border-blue-300 rounded-lg py-5 bg-black">
           <img
             src="https://i.ibb.co.com/rRKQYMFm/article-evaluation-editing-internet-blogging-content-management-search-engine-optimization-seo-marke.avif"
             className="w-32 h-32 object-cover rounded-full border mx-auto border-blue-600"
@@ -21,7 +21,7 @@ export default function ManagementCard() {
             </p>
           </div>
         </div>
-        <div className="px-4">
+        <div className="px-4 border border-blue-300 rounded-lg py-5 bg-black">
           <img
             src="https://i.ibb.co.com/JjYKCDbq/untitled-design-8-62fa46683a476-sej.jpg"
             className="w-32 h-32 object-cover rounded-full border mx-auto border-blue-600"
@@ -38,7 +38,7 @@ export default function ManagementCard() {
             </p>
           </div>
         </div>
-        <div className="px-4">
+        <div className="px-4 border border-blue-300 rounded-lg py-5 bg-black">
           <img
             src="https://i.ibb.co.com/Kj7W5MN0/360-F-604845183-o-OSW2-TTPt-WMC5v-Nk-IDiz-YEy-R5cq-Yt-Yt-Z.jpg"
             className="w-32 h-32 object-cover rounded-full border mx-auto border-blue-600"
@@ -55,7 +55,7 @@ export default function ManagementCard() {
             </p>
           </div>
         </div>
-        <div className="px-4">
+        <div className="px-4 border border-blue-300 rounded-lg py-5 bg-black">
           <img
             src="https://i.ibb.co.com/Lhdv0hgZ/still-b025ae45ad8f4edc5b2bffb7c49749e2.jpg"
             className="w-32 h-32 object-cover rounded-full border mx-auto border-blue-600"

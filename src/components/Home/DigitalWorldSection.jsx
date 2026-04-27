@@ -23,7 +23,7 @@ const DigitalWorldSection = () => {
               className="w-full h-full object-cover rounded-md"
               alt="Social Media Image"
             />
-            <div className="absolute top-2 left-3 w-174 px-4 py-6 rounded-md bg-black/50">
+            <div className="absolute hidden md:block top-2 left-3 w-174 px-4 py-6 rounded-md bg-black/50">
               <section className="flex justify-between items-center gap-4">
                 <div className="flex flex-col items-center">
                   <p className="text-white text-2xl font-bold">15</p>
@@ -43,7 +43,7 @@ const DigitalWorldSection = () => {
             </div>
           </div>
           <div className="col-span-5 w-full flex flex-col mt-20 gap-4">
-            <div className="px-5 py-7 bg-gray-700 rounded-lg">
+            <div className="px-5 py-7 bg-black rounded-lg">
               <button className="bg-white text-black px-2 py-1.5 rounded-md">
                 01
               </button>
@@ -54,7 +54,7 @@ const DigitalWorldSection = () => {
                 medical industry.
               </p>
             </div>
-            <div className="px-5 py-7 bg-gray-700 rounded-lg">
+            <div className="px-5 py-7 bg-black rounded-lg">
               <button className="bg-white text-black px-2 py-1.5 rounded-md">
                 02
               </button>
@@ -65,7 +65,7 @@ const DigitalWorldSection = () => {
                 medical industry.
               </p>
             </div>
-            <div className="px-5 py-7 bg-gray-700 rounded-lg">
+            <div className="px-5 py-7 bg-black rounded-lg">
               <button className="bg-white text-black px-2 py-1.5 rounded-md">
                 03
               </button>

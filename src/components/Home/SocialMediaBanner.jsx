@@ -11,7 +11,7 @@ export default function SocialMediaBanner() {
             backgroundPosition: 'center'
           }}>
       <div className="flex max-w-10/12 py-2 md:py-40 mx-auto justify-between items-center gap-6 md:gap-12 flex-col md:flex-row">
-        <div className='flex-1'>
+        <div className='flex-1 md:h-94'>
           <img src={bannerImage} className="w-full h-full rounded-md" alt="Banner Images" />
         </div>
         <div className='flex-1'>
