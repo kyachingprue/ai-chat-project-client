@@ -58,22 +58,89 @@ export default function Navbar() {
             </div>
           </div>
           {/* DESKTOP MENU */}
-          <div className="hidden md:flex gap-8 text-white">
-            <NavLink to="/" className="hover:text-sky-400">
-              Home
+          <div className="hidden md:flex gap-8 text-white relative">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `relative pb-1 transition-colors duration-300 ${
+                  isActive ? 'text-sky-400' : 'hover:text-sky-400'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <span className="relative">
+                  Home
+                  {/* underline */}
+                  <span
+                    className={`absolute left-0 -bottom-1 h-0.5 bg-sky-400 transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0'
+                    }`}
+                  />
+                </span>
+              )}
             </NavLink>
-            <NavLink to="/about" className="hover:text-sky-400">
-              About
+
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `relative pb-1 transition-colors duration-300 ${
+                  isActive ? 'text-sky-400' : 'hover:text-sky-400'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <span className="relative">
+                  About
+                  <span
+                    className={`absolute left-0 -bottom-1 h-0.5 bg-sky-400 transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0'
+                    }`}
+                  />
+                </span>
+              )}
             </NavLink>
-            <NavLink to="/services" className="hover:text-sky-400">
-              Services
+
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                `relative pb-1 transition-colors duration-300 ${
+                  isActive ? 'text-sky-400' : 'hover:text-sky-400'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <span className="relative">
+                  Services
+                  <span
+                    className={`absolute left-0 -bottom-1 h-0.5 bg-sky-400 transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0'
+                    }`}
+                  />
+                </span>
+              )}
             </NavLink>
-            <NavLink to="/contact" className="hover:text-sky-400">
-              Contact
+
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `relative pb-1 transition-colors duration-300 ${
+                  isActive ? 'text-sky-400' : 'hover:text-sky-400'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <span className="relative">
+                  Contact
+                  <span
+                    className={`absolute left-0 -bottom-1 h-0.5 bg-sky-400 transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0'
+                    }`}
+                  />
+                </span>
+              )}
             </NavLink>
           </div>
-          {/* RIGHT SIDE */}
-          {/* Buttons */}{' '}
+          {/* RIGHT SIDE */}{' '}
           <div className="flex items-center space-x-1 md:space-x-4">
             {' '}
             {user ? (
