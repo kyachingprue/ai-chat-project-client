@@ -1,42 +1,156 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { motion } from 'motion/react'
+import {
+  FaPlay,
+  FaPause,
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube,
+  FaChartLine,
+  FaUsers
+} from 'react-icons/fa'
+import videoPoster from '../../assets/video/project_video.mp4'
 
 export default function SocialMediaVideo() {
+  const videoRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const handleVideoPlay = async () => {
+    if (!videoRef.current) return
+
+    try {
+      if (isPlaying) {
+        videoRef.current.pause()
+        setIsPlaying(false)
+      } else {
+        await videoRef.current.play()
+        setIsPlaying(true)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
-    <div className="bg-black min-h-screen w-full">
-      <div className="flex py-20 md:py-40 flex-col max-w-10/12 mx-auto md:flex-row gap-5 md:gap-12 items-center justify-between">
-        <div className="flex-1">
-          <h2 className="text-2xl font-bold text-start text-white">
-            Watch Our Video
-          </h2>
-          <p className="text-gray-400 text-sm/5 md:text-base/7 py-5">
-            Credibly supply clicks-and-mortar users after interactive data.
-            Proactively fashion error-free materials rather than client-focused
-            infrastructures. Efficiently disintermediate corporate markets
-            before market positioning channels. Monotonectally utilize state of
-            the art intellectual capital before go forward processes.
-            Phosfluorescently cultivate bleeding-edge interfaces through.
-          </p>
-          <button
-            className="relative overflow-hidden text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-xl bg-linear-to-r from-sky-500 via-blue-600 to-purple-600 text-white font-medium shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-[0_0_25px_rgba(56,189,248,0.6)]"
+    <section className="relative min-h-screen w-full bg-[#050505] overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-pink-500/20 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-cyan-500/20 blur-3xl rounded-full animate-pulse"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-10 py-20 md:py-28">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
           >
-            {/* Shine Effect */}
-            <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition duration-500"></span>
+            <p className="text-cyan-400 uppercase tracking-[4px] text-sm font-semibold">
+              Social Media Strategy
+            </p>
 
-            {/* Moving Light Effect */}
-            <span
-              className="absolute -left-20 top-0 h-full w-20 bg-white/20 blur-md rotate-12 transition-all duration-700 group-hover:left-full"
-            ></span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mt-3 leading-tight">
+              Watch How We Grow Brands Through Video Content
+            </h2>
 
-            <span className="relative z-10">Get Started 🚀</span>
-          </button>
-        </div>
-        <div className="flex-1">
-          <img
-            src="https://i.ibb.co.com/4nb70Chc/A-Quick-Guide-to-Social-Media-Video-Production.jpg"
-            alt="social media video banner images"
-          />
+            <p className="text-gray-400 leading-8 mt-6 text-sm md:text-base">
+              Powerful short-form videos, engaging reels, viral campaigns, and
+              data-driven marketing strategies that increase followers.
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-cyan-400 transition duration-500">
+                <FaChartLine className="text-cyan-400 text-2xl" />
+                <h4 className="text-white text-2xl font-bold mt-3">+320%</h4>
+                <p className="text-gray-400 text-sm mt-1">Engagement Growth</p>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-pink-400 transition duration-500">
+                <FaUsers className="text-pink-400 text-2xl" />
+                <h4 className="text-white text-2xl font-bold mt-3">+50K</h4>
+                <p className="text-gray-400 text-sm mt-1">New Followers</p>
+              </div>
+            </div>
+
+            {/* Updated Button Logic */}
+            <button
+              onClick={handleVideoPlay}
+              className="group relative mt-8 overflow-hidden px-8 py-4 rounded-full bg-linear-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-semibold shadow-xl hover:scale-105 active:scale-95 transition duration-500"
+            >
+              <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition duration-500"></span>
+
+              <span className="relative z-10 flex items-center gap-3">
+                {isPlaying ? 'Pause Campaign' : 'Start Campaign'}
+
+                <span className="bg-white/20 p-2 rounded-full">
+                  {isPlaying ? <FaPause /> : <FaPlay />}
+                </span>
+              </span>
+            </button>
+
+            {/* Social Icons */}
+            <div className="flex gap-4 mt-8">
+              {[FaFacebookF, FaInstagram, FaYoutube].map((Icon, i) => (
+                <div
+                  key={i}
+                  className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 hover:bg-cyan-500 hover:text-white hover:-translate-y-1 transition duration-500 cursor-pointer"
+                >
+                  <Icon />
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right Video Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+              <video
+                ref={videoRef}
+                loop
+                controls
+                playsInline
+                className="w-full h-65 md:h-125 object-cover"
+                poster="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb"
+              >
+                <source src={videoPoster} type="video/mp4" />
+              </video>
+
+              {/* Playing Badge */}
+              <div className="absolute top-4 right-4 bg-black/60 text-white text-xs px-4 py-2 rounded-full backdrop-blur-md">
+                {isPlaying ? 'Now Playing ●' : 'Ready To Play'}
+              </div>
+
+              {/* Overlay Content */}
+              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-6">
+                <h4 className="text-white text-xl font-bold">
+                  Viral Content Production
+                </h4>
+                <p className="text-gray-300 text-sm mt-2">
+                  Reels, Shorts, Ads & Promotional Campaign Videos
+                </p>
+              </div>
+            </div>
+
+            {/* Floating Card */}
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ repeat: Infinity, duration: 4 }}
+              className="absolute -bottom-5 -left-2 md:left-5 bg-white/10 backdrop-blur-xl border border-white/20 px-5 py-4 rounded-2xl"
+            >
+              <p className="text-pink-400 text-lg font-bold">98% Success</p>
+              <p className="text-gray-300 text-sm">Client Satisfaction</p>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
