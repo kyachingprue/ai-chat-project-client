@@ -3,6 +3,7 @@ import ServiceBanner from '../components/Services/ServiceBanner';
 import ServicePricingCard from '../components/Services/ServicePricingCard';
 import ServicesSection from '../components/Services/ServicesSection';
 import ServiceNewSection from '../components/Services/ServiceNewSection';
+import ServicesModernSection from '../components/Services/ServicesModernSection';
 
 export default function Services() {
   return (
@@ -10,7 +11,8 @@ export default function Services() {
       <ServiceBanner />
       <ServicePricingCard />
       <ServicesSection />
-      <ServiceNewSection/>
+      <ServiceNewSection />
+      <ServicesModernSection/>
     </section>
   );
 }
