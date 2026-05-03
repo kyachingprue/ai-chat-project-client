@@ -48,7 +48,7 @@ export default function Navbar() {
               >
                 {' '}
                 {/* Text */}{' '}
-                <h2 className="text-md md:text-xl font-bold text-white relative z-10">
+                <h2 className="text-md md:text-xl hidden md:block font-bold text-white relative z-10">
                   {' '}
                   AetherAI{' '}
                 </h2>{' '}
@@ -144,30 +144,62 @@ export default function Navbar() {
           <div className="flex items-center space-x-1 md:space-x-4">
             {' '}
             {user ? (
-              <Link to="/profile">
-                {' '}
-                <div className="relative group cursor-pointer">
+              <div className="flex items-center gap-2 md:gap-4">
+                <Link to="/dashboard">
+                  <button className="group relative overflow-hidden rounded-xl px-3 md:px-6 py-1.5 md:py-2.5 text-sm md:text-base font-semibold text-white bg-linear-to-r from-sky-500 via-cyan-500 to-blue-600 shadow-lg shadow-sky-500/20 transition-all duration-500 ease-out hover:scale-105 hover:shadow-sky-400/40 hover:-translate-y-0.5 active:scale-95">
+                    {/* Animated Glow */}
+                    <span className="absolute inset-0 bg-linear-to-r from-white/10 via-white/30 to-white/10 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-1000 ease-in-out"></span>
+
+                    {/* Inner Border */}
+                    <span className="absolute inset-px rounded-xl bg-black/10 backdrop-blur-md"></span>
+
+                    {/* Text */}
+                    <span className="relative z-10 flex items-center gap-2">
+                      <p className="text-white text-sm md:text-base">
+                        Dashboard
+                      </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2"
+                        stroke="currentColor"
+                        className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </Link>
+                <Link to="/profile">
                   {' '}
-                  {/* User Image */}{' '}
-                  <img
-                    src={
-                      user.photoURL
-                        ? user.photoURL
-                        : 'https://i.ibb.co/4pDNDk1/avatar.png'
-                    }
-                    alt="user"
-                    className="w-10 h-10 md:w-11 md:h-11 rounded-full border-2 border-sky-500 object-cover hover:scale-110 transition duration-300 shadow-lg"
-                  />{' '}
-                  {/* Hover Name */}{' '}
-                  <div className="absolute right-0 top-12 opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-300 pointer-events-none z-50">
+                  <div className="relative group cursor-pointer">
                     {' '}
-                    <div className="px-3 py-2 rounded-lg bg-black text-white text-sm whitespace-nowrap border border-sky-500 shadow-xl">
+                    {/* User Image */}{' '}
+                    <img
+                      src={
+                        user.photoURL
+                          ? user.photoURL
+                          : 'https://i.ibb.co/4pDNDk1/avatar.png'
+                      }
+                      alt="user"
+                      className="w-10 h-10 md:w-11 md:h-11 rounded-full border-2 border-sky-500 object-cover hover:scale-110 transition duration-300 shadow-lg"
+                    />{' '}
+                    {/* Hover Name */}{' '}
+                    <div className="absolute right-0 top-12 opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-300 pointer-events-none z-50">
                       {' '}
-                      {user.displayName || 'User'}{' '}
+                      <div className="px-3 py-2 rounded-lg bg-black text-white text-sm whitespace-nowrap border border-sky-500 shadow-xl">
+                        {' '}
+                        {user.displayName || 'User'}{' '}
+                      </div>{' '}
                     </div>{' '}
                   </div>{' '}
-                </div>{' '}
-              </Link>
+                </Link>
+              </div>
             ) : (
               <>
                 {' '}

@@ -41,7 +41,7 @@ const Login = () => {
       })
   }
 
-  // ✅ Fixed Forgot Password
+  // ✅ Forgot Password
   const handleForgetPassword = () => {
     const email = getValues('email')
 
