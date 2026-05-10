@@ -145,7 +145,7 @@ export default function Navbar() {
             {' '}
             {user ? (
               <div className="flex items-center gap-2 md:gap-4">
-                <Link to="/dashboard">
+                <Link to="/dashboard/user-dashboard">
                   <button className="group relative overflow-hidden rounded-xl px-3 md:px-6 py-1.5 md:py-2.5 text-sm md:text-base font-semibold text-white bg-linear-to-r from-sky-500 via-cyan-500 to-blue-600 shadow-lg shadow-sky-500/20 transition-all duration-500 ease-out hover:scale-105 hover:shadow-sky-400/40 hover:-translate-y-0.5 active:scale-95">
                     {/* Animated Glow */}
                     <span className="absolute inset-0 bg-linear-to-r from-white/10 via-white/30 to-white/10 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-1000 ease-in-out"></span>

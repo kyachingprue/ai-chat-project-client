@@ -20,8 +20,8 @@ const menu = [
   { name: 'Dashboard', path: '/dashboard/user-dashboard', icon: <FaCube /> },
   { name: 'AI Models', path: '/dashboard/ai-models', icon: <FaRobot /> },
   { name: 'Analytics', path: '/dashboard/analytics', icon: <FaChartPie /> },
-  { name: 'Playground', path: '/dashboard/playground', icon: <FaCode /> },
-  { name: 'Users', path: '/dashboard/users', icon: <FaUsers /> },
+  { name: 'PlayGround', path: '/dashboard/playground', icon: <FaCode /> },
+  { name: 'Usage Stats', path: '/dashboard/usage-stats', icon: <FaUsers /> },
   { name: 'Database', path: '/dashboard/database', icon: <FaDatabase /> },
   { name: 'Security', path: '/dashboard/security', icon: <FaShieldAlt /> },
   { name: 'Settings', path: '/dashboard/settings', icon: <FaCog /> }
@@ -258,7 +258,7 @@ export default function DashboardLayout() {
               </button>
 
               {/* TITLE */}
-              <div className="min-w-0">
+              <div className="min-w-0 hidden sm:block">
                 <h1
                   className="
             text-sm sm:text-lg lg:text-xl
@@ -341,8 +341,8 @@ export default function DashboardLayout() {
         </header>
 
         {/* PAGE */}
-        <main className="pt-24 p-2 md:p-4">
-          <div className="min-h-screen rounded-[30px] border border-(--primary)/10 bg-(--card)/10 overflow-hidden">
+        <main className="pt-16 sm:pt-20 lg:pt-24 p-2 sm:p-3 lg:p-4">
+          <div className="min-h-screen rounded-2xl lg:rounded-[30px] border bg-(--card)/10 border-(--primary)/10 overflow-hidden ">
             <Outlet />
           </div>
         </main>

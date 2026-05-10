@@ -12,6 +12,11 @@ import DashboardLayout from '@/layout/DashboardLayout'
 import UserDashboard from '@/dashboard/user/UserDashboard'
 import AIModels from '@/dashboard/user/AIModels'
 import Analytics from '@/dashboard/user/Analytics'
+import PlayGround from '@/dashboard/user/PlayGround'
+import UsageStats from '@/dashboard/user/UsageStats'
+import Database from '@/dashboard/user/Database'
+import Security from '@/dashboard/user/Security'
+import Settings from '@/dashboard/user/Settings'
 
 const router = createBrowserRouter([
   {
@@ -56,6 +61,26 @@ const router = createBrowserRouter([
       {
         path: 'analytics',
         element: <Analytics/>
+      },
+      {
+        path: 'playground',
+        element: <PlayGround/>
+      },
+      {
+        path: 'usage-stats',
+        element: <UsageStats/>
+      },
+      {
+        path: 'database',
+        element: <Database/>
+      },
+      {
+        path: 'security',
+        element: <Security/>
+      },
+      {
+        path: 'settings',
+        element: <Settings/>
       }
     ]
   },

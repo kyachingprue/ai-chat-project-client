@@ -127,7 +127,7 @@ export default function Analytics() {
         min-h-screen
         relative
         overflow-hidden
-        px-1 md:px-3 lg:px-4 pt-20
+        p-1 md:p-3 lg:p-4
       "
       style={{
         background: 'var(--bg)',
