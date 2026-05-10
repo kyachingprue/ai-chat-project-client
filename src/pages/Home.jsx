@@ -6,10 +6,14 @@ import SocialMediaVideo from '../components/Home/SocialMediaVideo';
 import SmartSocialSection from '../components/Home/SmartSocialSection';
 import SocialPlatformsSection from '../components/Home/SocialPlatformsSection';
 import DigitalWorldSection from '../components/Home/DigitalWorldSection';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   return (
-   <section>
+    <section>
+      <Helmet>
+        <title>AetherAI | Home page</title>
+      </Helmet>
       <Banner />
       <SmartSocialSection/>
       <ManagementCard />

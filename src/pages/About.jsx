@@ -4,10 +4,14 @@ import AboutSection from '../components/About/AboutSection';
 import AboutSmartSection from '../components/About/AboutSmartSection';
 import AboutNewSection from '../components/About/AboutNewSection';
 import AboutLogicSection from '../components/About/AboutLogicSection';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title> AetherAI | About Us</title>
+      </Helmet>
       <AboutBanner />
       <AboutSection />
       <AboutSmartSection />

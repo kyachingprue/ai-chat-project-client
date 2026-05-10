@@ -8,7 +8,10 @@ import Contact from '../pages/Contact'
 import Login from '../components/Authentication/Login/Login'
 import Register from '../components/Authentication/Register/Register'
 import Profile from '../pages/Profile'
-import Dashboard from '../layout/Dashboard'
+import DashboardLayout from '@/layout/DashboardLayout'
+import UserDashboard from '@/dashboard/user/UserDashboard'
+import AIModels from '@/dashboard/user/AIModels'
+import Analytics from '@/dashboard/user/Analytics'
 
 const router = createBrowserRouter([
   {
@@ -40,7 +43,21 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard/>
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: 'user-dashboard',
+        element: <UserDashboard/>
+      },
+      {
+        path: 'ai-models',
+        element:<AIModels/>
+      },
+      {
+        path: 'analytics',
+        element: <Analytics/>
+      }
+    ]
   },
   {
     path: '/login',
